@@ -1,0 +1,15 @@
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\bin\Debug\net6.0\ReflectDLL.exe
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\bin\Debug\net6.0\ReflectDLL.deps.json
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\bin\Debug\net6.0\ReflectDLL.runtimeconfig.json
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\bin\Debug\net6.0\ReflectDLL.dll
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\bin\Debug\net6.0\ReflectDLL.pdb
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.csproj.AssemblyReference.cache
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.AssemblyInfoInputs.cache
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.AssemblyInfo.cs
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.csproj.CoreCompileInputs.cache
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.dll
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\refint\ReflectDLL.dll
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.pdb
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ReflectDLL.genruntimeconfig.cache
+C:\Users\Raiden\source\repos\ReflectDLL\ReflectDLL\obj\Debug\net6.0\ref\ReflectDLL.dll
