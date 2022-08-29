@@ -5,6 +5,8 @@ By giving the path to a DLL built using .NET, each classes dependencies are save
 Dependencies are only saved when the type of the dependency can be found within the same DLL.
 
 Example usage
+
+
   --Open terminal and change directory to the folder with the solution
   
   
