@@ -95,14 +95,14 @@ public class Program
                 dependencies.Add(type.Name, new());
                 foreach (var field in type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance))
                 {
-                    if (typeNames.Contains(field.FieldType.Name))
+                    if (typeNames.Contains(field.FieldType.Name) && !dependencies[type.Name].Contains(field.FieldType.Name))
                     {
                         dependencies[type.Name].Add(field.FieldType.Name);
                     }
                 }
                 foreach (var property in type.GetProperties(BindingFlags.NonPublic | BindingFlags.Instance))
                 {
-                    if (typeNames.Contains(property.PropertyType.Name))
+                    if (typeNames.Contains(property.PropertyType.Name) && !dependencies[type.Name].Contains(property.PropertyType.Name))
                     {
                         dependencies[type.Name].Add(property.PropertyType.Name);
                     }
