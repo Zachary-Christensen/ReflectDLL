@@ -4,7 +4,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine(String.Join(',', args));
         if (args.Length < 1)
         {
             Console.WriteLine("Must enter path to DLL as argument. example usage ./ReflectDLL.exe [pathToDLL]");
@@ -17,15 +16,11 @@ public class Program
         {
             assem = Assembly.LoadFrom(filename);
 
-            List<string> typeNames = new();
-            foreach (var type in assem.GetTypes())
-            {
-                if (type.IsEnum) continue;
+            List<string> typeNames = GetTypeNames(assem);
 
-                typeNames.Add(type.Name);
-            }
+            Dictionary<string, List<string>> dependencies = GetDependencies(assem, typeNames);
 
-            PrintDependencies(GetDependencies(assem, typeNames));
+            WriteResultsToCSVs(typeNames, dependencies);
         }
         catch (Exception ex)
         {
@@ -34,6 +29,42 @@ public class Program
         }
 
         
+    }
+
+    private static List<string> GetTypeNames(Assembly assem)
+    {
+        List<string> typeNames = new();
+        foreach (var type in assem.GetTypes())
+        {
+            if (type.IsEnum) continue;
+            if (type.Name.Length > 0)
+            {
+                if (!char.IsLetter(type.Name.ToCharArray()[0]))
+                {
+                    continue;
+                }
+            }
+
+            typeNames.Add(type.Name);
+        }
+        
+        return typeNames;
+    }
+
+    private static void WriteResultsToCSVs(List<string> typeNames, Dictionary<string, List<string>> dependencies)
+    {
+        using (StreamWriter sw = new StreamWriter(new FileStream("TypeNames.csv", FileMode.Create)))
+        {
+            typeNames.ForEach(x => sw.WriteLine(x));
+        }
+
+        using (StreamWriter sw = new StreamWriter(new FileStream("Dependencies.csv", FileMode.Create)))
+        {
+            foreach (var key in dependencies.Keys)
+            {
+                dependencies[key].ForEach(x => sw.WriteLine($"{key},{x}"));
+            }
+        }
     }
 
     private static void PrintDependencies(Dictionary<string, List<string>> dependencies)
