@@ -6,10 +6,20 @@ Dependencies are only saved when the type of the dependency can be found within 
 
 Example usage
   --Open terminal and change directory to the folder with the solution
+  
+  
   --Run the command "dotnet build"
+  
+  
   --Change directory to "./ReflectDLL/bin/Debug/net6.0" * the number after /net may vary *
+  
+  
   --Run the command "dotnet ./ReflectDLL.dll [pathToDLL]"
+  
+  
   --Move the generated CSV files "Dependencies.csv" and "TypeNames.csv" to the folder with the GraphDependencies.py file
+  
+  
   --Now, running ./GraphDependencies.py will output a digraph of the dependencies
 
 Notes:
