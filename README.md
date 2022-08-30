@@ -25,6 +25,9 @@ Example usage
   --Now, running ./GraphDependencies.py will output a digraph of the dependencies
 
 Notes:
+
   Very large graphs may not be readable
+  
+  Results may include some erroneous types surrounded by angle brackets. These results are not graphed, but they are in the CSV
   
   
