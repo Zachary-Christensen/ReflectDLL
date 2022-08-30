@@ -8,7 +8,8 @@ dependencies = pd.read_csv('Dependencies.csv')
 dependencies.columns = ['Class', 'Dependency']
 
 for index, row in dependencies.iterrows():
-    g.edge(row['Class'], row['Dependency'])
+    if (not row['Class'].__contains__('<')):
+        g.edge(row['Class'], row['Dependency'])
 g.view()
 
 
