@@ -107,6 +107,21 @@ public class Program
                         dependencies[type.Name].Add(property.PropertyType.Name);
                     }
                 }
+
+                foreach (var field in type.GetFields())
+                {
+                    if (typeNames.Contains(field.FieldType.Name) && !dependencies[type.Name].Contains(field.FieldType.Name))
+                    {
+                        if (!dependencies[type.Name].Contains(field.FieldType.Name)) dependencies[type.Name].Add(field.FieldType.Name);
+                    }
+                }
+                foreach (var property in type.GetProperties())
+                {
+                    if (typeNames.Contains(property.PropertyType.Name) && !dependencies[type.Name].Contains(property.PropertyType.Name))
+                    {
+                        if (!dependencies[type.Name].Contains(property.PropertyType.Name)) dependencies[type.Name].Add(property.PropertyType.Name);
+                    }
+                }
             }
         }
         return dependencies;

@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Files added from me
+*.gv
+*.gv.pdf
+Dependencies.csv
+TypeNames.csv
